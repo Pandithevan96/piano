@@ -7,6 +7,68 @@
   pointer-events: none;
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano-ui {
+  width: 950px;
+  height: 350px;
+  background-color: #A6A6A6;
+  display: flex;
+  justify-content: center;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 70px;
+}
+
+.piano-keys .keys {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Vertically center the content */
+}
+
+.piano-keys .white {
+  width: 70px;
+  height: 250px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.piano-keys .white:hover {
+  background:linear-gradient(45deg,#6393A6,#0597F2);
+}
+.piano-keys .black:hover {
+  background:linear-gradient(45deg,#6393A6,#0597F2);
+  
+}
+.piano-keys .black {
+  border-radius: 0 0 5px 5px;
+  margin: 0 -22px 0 -22px;
+  width: 45px;
+  height: 160px;
+  background: black;
+  z-index: 1;
+  box-shadow: inset 0 0 12px 4px rgba(222,222,222, 0.5); 
+}
+
+.piano-keys .black:nth-child(6),
+.piano-keys .black:nth-child(14) {
+  visibility: hidden;
+}
+
+.keys span {
+  margin-bottom: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
